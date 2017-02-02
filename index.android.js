@@ -11,6 +11,17 @@ import {
   Text,
   View
 } from 'react-native';
+import * as firebase from 'firebase';
+
+// Initialize Firebase
+const config = {
+  apiKey: "AIzaSyA3C8EdRvdMvku6pOtJx_5Edr5gfKISfOY",
+  authDomain: "meetme-752d7.firebaseapp.com",
+  databaseURL: "https://meetme-752d7.firebaseio.com",
+  storageBucket: "meetme-752d7.appspot.com",
+  messagingSenderId: "521492210841"
+};
+const firebaseApp = firebase.initializeApp(config);
 
 export default class meetme extends Component {
   render() {
