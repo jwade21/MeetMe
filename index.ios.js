@@ -9,8 +9,10 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  TextInput,
   View
 } from 'react-native';
+import SignIn from './components/SignIn.js';
 import * as firebase from 'firebase';
 
 // Initialize Firebase
@@ -27,16 +29,13 @@ export default class meetme extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <View style={styles.welcome}>
+          <Text>MeetMe</Text>
+          <Text>Find your friends. Easy as that.</Text>
+        </View>
+        <View style={styles.signIn}>
+          <SignIn  />
+        </View>
       </View>
     );
   }
@@ -50,15 +49,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    flex: 1
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  signIn: {
+    flex: 1
+  }
+
 });
 
 AppRegistry.registerComponent('meetme', () => meetme);
